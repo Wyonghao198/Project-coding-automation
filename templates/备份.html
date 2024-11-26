@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Upload File</title>
+</head>
+<body>
+    <form action="/upload" method="post" enctype="multipart/form-data">
+        <!-- 发送/upload路径中 -->
+        <!-- multipart/form-data转化为二进制储存表单 -->
+        <input type="text" name="username" placeholder="Username">
+        <input type="file" name="file" accept=".xls,.xlsx,.xlsm">
+        <button type="submit">Upload</button>
+    </form>
+</body>
+</html>
