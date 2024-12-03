@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Index Page</title>
+    <style>
+        /* 图片样式 */
+        .center-form img {
+            margin-bottom: 20px; /* 底部外边距，用于与表单元素分隔 */
+            width: 500px; /* 图片宽度，可以根据需要调整 */
+            height: auto; /* 图片高度自动调整以保持宽高比 */
+        }
+        body {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 80vh; /* 使body高度等于视口高度 */
+            margin: 0; /* 移除默认的body边距 */
+            text-align: center; /* 可选：使页面中的所有文本都居中，但这里主要用于h1 */
+        }
+
+        .button-container {
+            margin-top: 20px; /* 可选：增加一些顶部间距 */
+        }
+
+        .button-link {
+            display: inline-block;
+            padding: 30px 30px;
+            font-size: 16px;
+            font-weight: bold;
+            text-align: center;
+            text-decoration: none;
+            color: #fff;
+            background-color: #007BFF;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            margin: 0 20px; /* 可选：增加按钮之间的间距 */
+        }
+
+        .button-link:hover {
+            background-color: #0056b3;
+        }
+
+        h1 {
+            margin-bottom: 20px; /* 可选：增加一些底部间距，使标题和按钮不紧贴 */
+        }
+    </style>
+</head>
+<body>
+    <div class="center-form">
+        <!-- 添加图片 -->
+        <img src="/static/images/shouye1.jpg" alt="Description of the image">
+    <h1>项目编码自动填充</h1>
+    <div class="button-container">
+        <a href="{{ url_for('page3') }}" class="button-link">应用使用说明</a>
+        <a href="{{ url_for('page1') }}" class="button-link">前九位填充</a>
+        <a href="{{ url_for('page2') }}" class="button-link">后三位序列码排列</a>
+    </div>
+</body>
+</html>

@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Upload File</title>
+    <style>
+        /* 居中整个表单 */
+        .center-form {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 68vh; /* 使容器高度等于视窗高度 */
+            text-align: center; /* 文本居中 */
+        }
+
+        /* 图片样式 */
+        .center-form img {
+            margin-bottom: 20px; /* 底部外边距，用于与表单元素分隔 */
+            width: 500px; /* 图片宽度，可以根据需要调整 */
+            height: auto; /* 图片高度自动调整以保持宽高比 */
+        }
+        /* 增大输入框和按钮的字体和尺寸 */
+        .center-form input[type="text"],
+        .center-form input[type="file"],
+        .center-form button {
+            font-size: 20px; /* 字体大小 */
+            padding: 10px; /* 内边距 */
+            margin: 10px 0; /* 上下外边距，左右为0 */
+        }
+
+        /* 可选：为输入框和按钮添加一些额外的样式，如边框和圆角 */
+        .center-form input[type="text"],
+        .center-form input[type="file"] {
+            border: 2px solid #ccc; /* 边框颜色 */
+            border-radius: 5px; /* 边框圆角 */
+        }
+
+        .center-form button {
+            background-color: #007BFF; /* 按钮背景色 */
+            color: white; /* 按钮文字颜色 */
+            border: none; /* 去除边框 */
+            border-radius: 5px; /* 边框圆角 */
+            padding: 10px 20px; /* 增大内边距以适应更大的字体 */
+            cursor: pointer; /* 鼠标悬停时显示手指形状 */
+        }
+
+        .center-form button:hover {
+            background-color: #0056b3; /* 鼠标悬停时的背景色 */
+        }
+    </style>
+</head>
+<body>
+    <div class="center-form">
+        <!-- 添加图片 -->
+        <img src="/static/images/shouye1.jpg" alt="Description of the image">
+
+        <form action="/upload1" method="post" enctype="multipart/form-data">
+            <!-- input type="text" name="username" placeholder="Username" -->
+            <input type="file" name="file" accept=".xls,.xlsx,.xlsm">
+            <button type="submit">上传</button>
+        </form>
+    </div>
+</body>
+</html>
